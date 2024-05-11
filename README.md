@@ -19,6 +19,13 @@ Approach 2:- Create hashmap<Character, Integer> , take 1st string,count the freq
 
 Approach 3:- create int[] count = new int[26], increment count of frequency for 1st string count[x - 'a']++, take 2nd string and similarly decrement the count. checck if at end have all zero frequency.
 
+### [Two Sum](https://leetcode.com/problems/two-sum/description/)
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+
+Approch 1:- Create a HashMap and while running through array hashMap.put(nums[i], i); if iterating element contains in hashMap  key, return current element index and  hashMap value.
+
 
 
 
