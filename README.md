@@ -32,7 +32,7 @@ Create a hashmap where the key is a sorted version of each string in the array, 
 ### [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)
 Given an integer array nums, return the k most frequent elements. You may return the answer in any order.
 
-*Approach:*
+*Approach1 :*
 1. *Frequency Counting:* 
    Create a hashmap to count the frequency of each element in the array.
 
@@ -41,7 +41,13 @@ Given an integer array nums, return the k most frequent elements. You may return
 
 3. *Extract Top K Elements:*
    Traverse the array of lists in reverse order (from highest frequency to lowest) and extract elements until we have collected the top k frequent elements.
+   
+*Approach2 :*
+1. *Frequency Counting:* 
+   Create a hashmap to count the frequency of each element in the array.
 
+2. *Priority Queue:*
+   Use a priority queue to store elements based on their frequency, with the highest frequency elements at the top. Iterate through the hashmap and add elements to the priority queue. Once the priority queue's size exceeds k, remove the element with the lowest frequency. Finally, return the elements remaining in the priority queue.
 
 
 
