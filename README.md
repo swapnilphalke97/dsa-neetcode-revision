@@ -50,4 +50,20 @@ Given an integer array nums, return the k most frequent elements. You may return
    Use a priority queue to store elements based on their frequency, with the highest frequency elements at the top. Iterate through the hashmap and add elements to the priority queue. Once the priority queue's size exceeds k, remove the element with the lowest frequency. Finally, return the elements remaining in the priority queue.
 
 
+### [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
+Given an array nums of n integers where n > 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+
+*Approach 1 :*
+1. *Left and Right Product Arrays:*
+   Iterate through the input array nums twice to construct two arrays, leftProducts and rightProducts, representing the product of all elements to the left and right of each element, respectively. 
+   
+2. *Construct Output Array:*
+   For each index i in the input array, the product of all elements except nums[i] is the product of leftProducts[i] and rightProducts[i]. Create the output array by multiplying corresponding elements from leftProducts and rightProducts.
+   
+*Approach 2 :* Similar to approch 1, but try to do inplace prefix suffix calculation to avoid extra space complexity.
+
+
+
+
+
 
