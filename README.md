@@ -29,6 +29,19 @@ Given an array of strings, group anagrams together.
 *Approach:* 
 Create a hashmap where the key is a sorted version of each string in the array, and the value is a list of strings that are anagrams of each other. Iterate through the array, sort each string, and check if the sorted string exists as a key in the hashmap. If it does, add the original string to the corresponding list. If not, create a new list with the original string as its only element and add it to the hashmap with the sorted string as the key. Finally, return the values of the hashmap.
 
+### [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)
+Given an integer array nums, return the k most frequent elements. You may return the answer in any order.
+
+*Approach:*
+1. *Frequency Counting:* 
+   Create a hashmap to count the frequency of each element in the array.
+
+2. *Bucket Sorting:*
+   Utilize bucket sorting to group elements by their frequency. Create an array of lists where each index represents the frequency of elements. Iterate through the frequency map and distribute elements into their respective buckets based on their frequency.
+
+3. *Extract Top K Elements:*
+   Traverse the array of lists in reverse order (from highest frequency to lowest) and extract elements until we have collected the top k frequent elements.
+
 
 
 
