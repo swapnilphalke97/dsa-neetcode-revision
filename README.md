@@ -63,6 +63,37 @@ Given an array nums of n integers where n > 1, return an array output such that 
 *Approach 2 :* Similar to approch 1, but try to do inplace prefix suffix calculation to avoid extra space complexity.
 
 
+##Two Pointers
+### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)
+Given a string s, determine if it is a valid palindrome. A valid palindrome is defined as a string that reads the same backward as forward, ignoring cases and non-alphanumeric characters.
+
+*Approach:*
+1. *Two-Pointer Technique:*
+   Use two pointers, one starting from the beginning of the string and the other starting from the end. Move both pointers towards the center, comparing characters at each step. Ignore non-alphanumeric characters and consider only alphanumeric characters for comparison. If the characters at corresponding positions are not equal, the string is not a palindrome.
+
+### [Two Sum II - Input Array is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
+Given an array of integers numbers that is already sorted in non-decreasing order, and an integer target, return indices of the two numbers such that they add up to target.
+
+*Approach:*
+1. *Two-Pointer Technique:*
+   Initialize two pointers, one at the beginning and the other at the end of the sorted array. Iterate through the array while the pointers do not overlap. Calculate the sum of the elements pointed to by the two pointers. If the sum is equal to the target, return the indices of the two elements. If the sum is less than the target, increment the left pointer to increase the sum. If the sum is greater than the target, decrement the right pointer to decrease the sum.
+
+### [Three Sum](https://leetcode.com/problems/3sum/)
+Given an array nums of n integers, return all unique triplets [nums[i], nums[j], nums[k]] such that nums[i] + nums[j] + nums[k] == 0.
+
+*Approach:*
+1. *Two-Pointer Technique:*
+   Sort the input array nums. Iterate through the array with a fixed element nums[i]. Use two pointers, one starting from the element after nums[i] and the other starting from the end of the array. Move the two pointers towards each other, checking if the sum of nums[i], nums[left], and nums[right] is equal to zero. If the sum is less than zero, increment the left pointer. If the sum is greater than zero, decrement the right pointer. If the sum is zero, add [nums[i], nums[left], nums[right]] to the result list. Skip duplicate elements to avoid duplicate triplets.
+
+### [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
+Given n non-negative integers height representing the heights of bars in a bar chart where the width of each bar is 1, compute the area of the largest rectangle that can be formed by the bars. 
+
+*Approach:*
+1. *Two-Pointer Technique:*
+   Initialize two pointers, one at the start of the array and the other at the end. Calculate the area of the rectangle formed by the two pointers (width = distance between the pointers, height = minimum height of the two bars). Move the pointer with the smaller height towards the other pointer. Update the maximum area encountered so far. Repeat this process until the two pointers meet.
+
+
+
 
 
 
