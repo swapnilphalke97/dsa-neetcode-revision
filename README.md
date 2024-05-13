@@ -63,7 +63,7 @@ Given an array nums of n integers where n > 1, return an array output such that 
 *Approach 2 :* Similar to approch 1, but try to do inplace prefix suffix calculation to avoid extra space complexity.
 
 
-##Two Pointers
+## Two Pointers
 ### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)
 Given a string s, determine if it is a valid palindrome. A valid palindrome is defined as a string that reads the same backward as forward, ignoring cases and non-alphanumeric characters.
 
