@@ -92,8 +92,48 @@ Given n non-negative integers height representing the heights of bars in a bar c
 1. *Two-Pointer Technique:*
    Initialize two pointers, one at the start of the array and the other at the end. Calculate the area of the rectangle formed by the two pointers (width = distance between the pointers, height = minimum height of the two bars). Move the pointer with the smaller height towards the other pointer. Update the maximum area encountered so far. Repeat this process until the two pointers meet.
 
+## Binary Search
+### [Binary Search](https://leetcode.com/problems/binary-search/description/)
 
+Given a sorted array and a target value, binary search efficiently locates the target within the array.
 
+*Approach:* 
+1. Initialize two pointers, left and right, at the start and end of the array, respectively.
+2. While left is less than or equal to right, calculate the middle index as (left + right) / 2.
+   - If the middle element equals the target, return its index.
+   - If the middle element is greater than the target, update right to mid - 1.
+   - If the middle element is less than the target, update left to mid + 1.
+3. If the target is not found, return -1.
+
+### [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
+
+Given a 2D matrix where each row is sorted in ascending order and the first integer of each row is greater than the last integer of the previous row, efficiently search for a target value.
+
+*Approach:* 
+1. Start from the top-right corner of the matrix.
+2. Compare the target value with the current element:
+   - If the target is equal to the current element, return true.
+   - If the target is less than the current element, move left to explore smaller elements in the same row.
+   - If the target is greater than the current element, move down to explore larger elements in the same column.
+3. Repeat the process until the target is found or the boundaries of the matrix are exceeded.
+4. If the target is not found after exploration, return false.
+
+### [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/description/)
+
+Koko loves to eat bananas, and she wants to finish eating all the bananas as quickly as possible. She has n piles of bananas, and the i-th pile has piles[i] bananas. The piles are arranged in a row. Koko can only eat at most one pile per hour, and she must eat the bananas in the order they are presented. 
+
+Given an integer array piles representing the number of bananas in each pile and an integer h representing the number of hours Koko has to eat all the bananas, the task is to find the minimum integer k such that Koko can eat all the bananas within h hours.
+
+*Approach:* 
+1. *Binary Search on Speed:*
+   - Initialize low to 1 (minimum speed) and high to the maximum pile size (maximum speed).
+   - While low is less than or equal to high, calculate the mid speed mid as (low + high) / 2.
+   - Check if Koko can finish eating all the bananas within h hours at the speed mid:
+     - For each pile, calculate the time required to eat its bananas at the speed mid.
+     - Sum up the time for all piles.
+     - If the total time is less than or equal to h, update high to mid, indicating that Koko can eat at a lower speed.
+     - Otherwise, update low to mid + 1, indicating that Koko needs to eat faster.
+   - After the binary search, return low as the minimum speed required for Koko to eat all the bananas within h hours.
 
 
 
