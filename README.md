@@ -149,4 +149,17 @@ Given the head of a singly linked list, reverse the list and return the reversed
      - Move the pointers one position forward: set prev to current and current to next.
    - At the end of the loop, prev will be the new head of the reversed list.
    - Return prev as the new head of the reversed list.
+### [Merge Two Sorted Arrays](https://leetcode.com/problems/merge-two-sorted-lists/)
 
+Given two sorted arrays nums1 and nums2, merge them into a single sorted array.
+
+*Approach:* 
+1. *Two Pointers Method:*
+   - Initialize two pointers: i at the beginning of nums1 and j at the beginning of nums2.
+   - Initialize an empty array merged to store the merged elements.
+   - While both pointers are within the bounds of their respective arrays, compare the elements at nums1[i] and nums2[j]:
+     - If nums1[i] is less than or equal to nums2[j], append nums1[i] to merged and increment i.
+     - Otherwise, append nums2[j] to merged and increment j.
+   - If there are remaining elements in nums1, append them to merged.
+   - If there are remaining elements in nums2, append them to merged.
+   - Return the merged array.
