@@ -149,6 +149,7 @@ Given the head of a singly linked list, reverse the list and return the reversed
      - Move the pointers one position forward: set prev to current and current to next.
    - At the end of the loop, prev will be the new head of the reversed list.
    - Return prev as the new head of the reversed list.
+     
 ### [Merge Two Sorted Arrays](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 Given two sorted arrays nums1 and nums2, merge them into a single sorted array.
@@ -163,3 +164,24 @@ Given two sorted arrays nums1 and nums2, merge them into a single sorted array.
    - If there are remaining elements in nums1, append them to merged.
    - If there are remaining elements in nums2, append them to merged.
    - Return the merged array.
+  
+### [Reorder List](https://leetcode.com/problems/reorder-list/description/)
+
+Given a singly linked list, reorder it to follow the specific pattern: L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → ....
+
+*Approach:* 
+1. *Find the Middle of the List:*
+   - Use the slow and fast pointer technique to find the middle node of the list.
+   - Initialize slow and fast pointers at the head of the list. Move slow by one step and fast by two steps until fast reaches the end.
+2. *Reverse the Second Half:*
+   - From the middle node, reverse the second half of the list.
+   - Initialize three pointers: prev as null, current as the middle node, and next as null.
+   - While current is not null, reverse the pointers and move forward.
+3. *Merge the Two Halves:*
+   - Initialize two pointers: first at the head of the list and second at the head of the reversed second half.
+   - Alternate between the nodes of the first half and the reversed second half to form the reordered list.
+   - Use a temporary pointer to keep track of the next nodes during the merge.
+4. *Update the Next Pointers:*
+   - Continue merging until all nodes are reordered.
+   - Ensure the last node of the reordered list points to null.
+
