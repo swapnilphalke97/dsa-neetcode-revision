@@ -184,4 +184,19 @@ Given a singly linked list, reorder it to follow the specific pattern: L0 → Ln
 4. *Update the Next Pointers:*
    - Continue merging until all nodes are reordered.
    - Ensure the last node of the reordered list points to null.
+   - 
+### [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
 
+Given the head of a singly linked list, remove the nth node from the end of the list and return its head.
+
+*Approach:* 
+1. *Two-Pointer Technique:*
+   - Initialize two pointers, first and second, both starting at the head of the list.
+   - Move the first pointer n steps forward.
+   - If first becomes null after moving n steps, it means the head needs to be removed, so return head.next.
+   - Otherwise, move both first and second pointers one step at a time until first reaches the end of the list.
+   - By this point, the second pointer will be just before the node to be removed.
+   - Adjust the next pointer of the second node to skip the nth node from the end.
+2. *Edge Cases:*
+   - If the list has only one node and n is 1, return null.
+   - Ensure proper handling of the edge case where the node to be removed is the head node.
