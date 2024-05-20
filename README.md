@@ -135,6 +135,18 @@ Given an integer array piles representing the number of bananas in each pile and
      - Otherwise, update low to mid + 1, indicating that Koko needs to eat faster.
    - After the binary search, return low as the minimum speed required for Koko to eat all the bananas within h hours.
 
+## Linked List
+### (Reverse a Linked List)[https://leetcode.com/problems/reverse-linked-list/description/]
 
+Given the head of a singly linked list, reverse the list and return the reversed list.
 
+*Approach:* 
+1. *Iterative Method:*
+   - Initialize three pointers: prev as null, current as head, and next as null.
+   - While current is not null, do the following:
+     - Store the next node: next = current.next.
+     - Reverse the current node's pointer: current.next = prev.
+     - Move the pointers one position forward: set prev to current and current to next.
+   - At the end of the loop, prev will be the new head of the reversed list.
+   - Return prev as the new head of the reversed list.
 
